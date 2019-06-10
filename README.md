@@ -12,10 +12,11 @@
 
 Yii 2 Advanced Optimized Project Template is the fork of Yii2 Advanced template.
 
-<h3>Note:</h3>
-This is alpha version of template. All contributings are welcome!
+> Note: This is alpha version of template. <b>All contributings are welcome!</b>
 
 <h3>Whats new</h3>
+------------------
+
  - Uses Bootstrap 4
  - Authorization forms in modal blocks with ajax validation
  - Authorization by social networks using `yiisoft/yii2-authclient`
@@ -26,7 +27,7 @@ This is alpha version of template. All contributings are welcome!
  - [IDE autocompletion for custom components](https://github.com/samdark/yii2-cookbook/blob/master/book/ide-autocompletion.md#ide-autocompletion-for-custom-components)
  - Added frontend and backend url manager components. And url rules moves in separates files.
  - Tabler template for backend on Bootstrap 4 ([Tabler](https://github.com/tabler/tabler))
- - ... 
+ - And more
 
 <h3>Installation</h3>
 By Composer:
