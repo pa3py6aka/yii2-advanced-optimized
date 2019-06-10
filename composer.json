@@ -1,7 +1,7 @@
 {
     "name": "pa3py6aka/yii2-advanced-optimized",
     "description": "Yii2 optimized template based on advanced template",
-    "keywords": ["Yii2, Yii2-advanced", "Yii2 template", "Yii2 Bootstrap 4", "bootstrap 4"],
+    "keywords": ["Yii2", "Yii2-advanced", "Yii2-advanced-optimized", "Yii2 template", "Yii2 Bootstrap 4", "bootstrap 4"],
     "homepage": "http://yiiframework.com",
     "type": "project",
     "license": "BSD-3-Clause",
