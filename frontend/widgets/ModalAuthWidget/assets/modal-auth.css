@@ -1,0 +1,9 @@
+#form-login .center-block {
+    display:inline-block;
+}
+.center-block .auth-clients {
+    padding-left: 0;
+}
+.auth-clients li:last-child {
+    margin-right: 0;
+}
