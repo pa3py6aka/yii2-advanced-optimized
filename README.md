@@ -15,7 +15,6 @@ Yii 2 Advanced Optimized Project Template is the fork of Yii2 Advanced template.
 > Note: This is alpha version of template. <b>All contributings are welcome!</b>
 
 <h3>Whats new</h3>
-------------------
 
  - Uses Bootstrap 4
  - Authorization forms in modal blocks with ajax validation
@@ -24,7 +23,8 @@ Yii 2 Advanced Optimized Project Template is the fork of Yii2 Advanced template.
    User can manage his content, moderator can manage all users content, admin has moderators access.
    You can apply to admins more privileges. Manage it in `console/controllers/RbacController.php`.
    After changes, execute `php yii rbac/init` command in the terminal (of course you must be in project directory).
- - [IDE autocompletion for custom components](https://github.com/samdark/yii2-cookbook/blob/master/book/ide-autocompletion.md#ide-autocompletion-for-custom-components)
+ - [IDE autocompletion for custom components](https://github.com/samdark/yii2-cookbook/blob/master/book/ide-autocompletion.md#ide-autocompletion-for-custom-components). 
+   Not forget exclude or "Mark as Plain Text" vendor/yiisoft/yii2/Yii.php file.
  - Added frontend and backend url manager components. And url rules moves in separates files.
  - Tabler template for backend on Bootstrap 4 ([Tabler](https://github.com/tabler/tabler))
  - And more
