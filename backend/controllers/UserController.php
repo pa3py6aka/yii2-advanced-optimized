@@ -65,15 +65,8 @@ class UserController extends Controller
         $form = new UserForm();
 
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-            $user = User::create($form->username, $form->email, $form->password);
-            $user->status = $form->status;
-            if (!$user->save()) {
-                throw new \RuntimeException('User saving error.');
-            }
-            foreach ($form->roles as $roleName) {
-                Yii::$app->authManager->assign(Yii::$app->authManager->getRole($roleName), $user->id);
-            }
-            return $this->redirect(['/user/view', 'id' => $user->id]);
+            $form->saveUser();
+            return $this->redirect(['/user/view', 'id' => $form->user->id]);
         }
 
         return $this->render('create', [
@@ -90,24 +83,11 @@ class UserController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
-        $form = new UserForm($model);
+        $user = $this->findModel($id);
+        $form = new UserForm($user);
 
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-            $user = $form->user;
-            $user->username = $form->username;
-            $user->email = $form->email;
-            $user->status = $form->status;
-            if ($form->password) {
-                $user->setPassword($form->password);
-            }
-            if (!$user->save()) {
-                throw new \RuntimeException('User saving error.');
-            }
-            Yii::$app->authManager->revokeAll($user->id);
-            foreach ($form->roles as $roleName) {
-                Yii::$app->authManager->assign(Yii::$app->authManager->getRole($roleName), $user->id);
-            }
+            $form->saveUser();
             return $this->redirect(['/user/view', 'id' => $user->id]);
         }
 

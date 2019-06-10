@@ -18,7 +18,9 @@ use common\models\User\User;
 
         <?= $form->field($model, 'email')->input('email') ?>
 
-        <?= $form->field($model, 'password')->passwordInput() ?>
+        <?= $form->field($model, 'password')
+                ->passwordInput()
+                ->hint(!$model->user ? 'If left blank, the current password will not change' : '') ?>
 
         <?= $form->field($model, 'status')->dropDownList(User::statusesArray()) ?>
 
